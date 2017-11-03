@@ -1099,3 +1099,13 @@ Processing by SongsController#index as HTML
   [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
   Rendered songs/index.html.erb within layouts/application (5.0ms)
 Completed 200 OK in 19ms (Views: 18.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/songs" for 205.168.59.134 at 2017-11-03 19:06:20 +0000
+Cannot render console from 205.168.59.134! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (1.3ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  [1m[35mArtist Load (0.3ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered songs/index.html.erb within layouts/application (26.5ms)
+Completed 200 OK in 36ms (Views: 33.3ms | ActiveRecord: 2.1ms)
